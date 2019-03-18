@@ -617,8 +617,9 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-//i3mini firmware defaults x 2 (changing from 1/16 steps to 1/32 steps) -- john0945
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 188 }
+//i3mini firmware defaults x 2 (changing from 1/16 steps to 1/32 steps) -- john0945 
+//measured 20.3mm on a 20mm print. 20.3/20 = 1.015 and 160/1.015 = 157.63 ... 158 steps should work. Similarly, 800 changed to 790. 95/100 mm for extruder - 188/0.95 = 198
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 158, 158, 790, 198 }
 
 /**
  * Default Max Feed Rate (mm/s)
